@@ -1522,7 +1522,34 @@ d. abstraction
 
 a. inheritance
 ######################
--> Here we inherit the members of parent class to child class so that we can re-use those members
+
+-> Inheritance means a child (sub) class can access the properties and methods of a parent (super) class using the extends keyword.
+-> ✅ Benefits of Inheritance
+
+Code reusability
+→ Child class can reuse parent class code.
+
+Reduces code duplication
+→ Common logic is written once in parent class.
+
+Supports runtime polymorphism
+→ Enables method overriding and dynamic behavior.
+
+Improves maintainability
+→ Changes in parent class reflect in child classes.
+
+Enhances extensibility
+→ New features can be added without modifying existing code.
+
+Provides hierarchical relationship
+→ Represents real-world relationships (IS-A).
+
+Faster development
+→ Less code to write, fewer bugs.
+
+Improves readability and structure
+→ Clear and organized class design.
+
 Example 1:
 ---------
 package app_java_1;
@@ -1598,6 +1625,9 @@ Root.java
 
 Example 3: Multilevel inheritance
 -----------------------------------
+Multilevel inheritance means a class is derived from another class, which itself is derived from another class, forming a chain of inheritance.
+-> Grandparent → Parent → Child
+
 
 package app_java_1;
 public class A {
@@ -1632,7 +1662,9 @@ Answer: When a child class has more than one parent class, it is called as mulit
 #################################################################################################
 
 Note: Java classes does not support mulitple inheritance because of diamond problem
-diamond problem: Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D. This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance
+diamond problem: The diamond problem occurs when a child class inherits from two parent classes and both parent 
+classes contain a method with the same signature, 
+confusion arises about which parent’s method the child class should access.
 
 Note: We can do mulitple inheritance on interface. But will explain this during interfaces concept
 
@@ -1703,7 +1735,7 @@ Questions:
 ----------------------------------------------------------------------
 
 
--> They define the visibility of variables, methods, class & interface.
+-> An access specifier controls the visibility (access level) of classes, methods, variables, and constructors in Java.
 
 ------------------------------------------------------------------------------
 a. private: When a variable / method is made private then we can access that in same class but not outside class
@@ -3396,13 +3428,19 @@ public interface A {
 ---------------------------------------------------
 Abstract class in java
 ----------------------------
--> We can create both complete / incomplete non static methods
--> To define non static incomplete method, it mandatory to use abstract keyword
--> In an abstract class we can create both static / non static members
--> We cannot create static incomplete methods here but we can create complete static methods
--> We can create main method inside abstract class
--> We cannot create object of abstract class because abstract class can consist of incomplete methods
--> We cannot perform multiple inheritance
+->  An abstract class can contain both complete and incomplete (abstract) non-static methods.
+
+-> To define an incomplete (abstract) non-static method, it is mandatory to use the abstract keyword.
+
+-> An abstract class can contain both static and non-static members.
+
+-> An abstract class cannot have static abstract methods, but it can have complete static methods.
+
+-> We can define a main method inside an abstract class.
+
+-> We cannot create an object of an abstract class because it may contain incomplete methods.
+
+-> An abstract class does not support multiple inheritance in Java.
 Example 1:
 ----------
 package p1;
@@ -3438,8 +3476,10 @@ public abstract class C extends A,B{//Error
 
 Difference between interface & abstract class
 -------------------------------------------------
-a. interface supports mulitple inheritance but abstract class does not support multiple inheritance
-b. All variables in an interface by default are final & static whereas inside abstract class we can create static/non static/final variables
+a. Interface supports multiple inheritance, but abstract class does not support multiple inheritance.
+b. All variables in an interface are public, static, and final by default, whereas an abstract class can have static, non-static, and final variables.
+c. Interface methods are abstract by default, whereas an abstract class can have both abstract and concrete methods.
+d. Interface cannot have constructors, whereas an abstract class can have constructors to initialize child class object.
 
 Example:
 -------
@@ -3536,9 +3576,9 @@ From test1
 
 Exception and Exception Handling In Java
 -------------------------------
--> Unexpected events are called exceptions.
--> Exceptions will hault your program execution.
--> Exceptions will Occur when bad user input is given
+-> Unexpected events that occur during program execution are called exceptions.
+-> Exceptions will hault your program execution if not handled properly.
+-> Exceptions will Occur when bad user input is given such as invalid data, devide by zero etc.
 
 Example 1:
 package p1;
@@ -3559,8 +3599,10 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 #######################
 Exception handling
 #######################
--> To handle exception we will use "try & catch" block in java
--> When exception occurs in try block, it will create exception object and that object's address is given to catch block. Catch block will suppress that exception and further code will continue to execute
+To handle exceptions in Java, we use the try and catch blocks.
+
+When an exception occurs inside the try block, an exception object is created and passed to the corresponding catch block.
+The catch block handles the exception,  and the remaining program continues to execute.
 
 
 
@@ -3795,9 +3837,9 @@ public class B extends A{
 public class C extends A{
 	public static void main(String[] args) {
 		A a1 = new B();
-		System.out.println(a1);
+		System.out.println(a1); // diiffernce object address
 		a1 = new C();
-		System.out.println(a1);
+		System.out.println(a1); // object address are difference
 	}
 }
 
@@ -5568,6 +5610,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
