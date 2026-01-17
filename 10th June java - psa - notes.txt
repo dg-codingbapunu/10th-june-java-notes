@@ -849,8 +849,10 @@ public class C {
 Constructors in java
 ######################
 
--> Should have same name as that of class
--> It is always void by default
+-> A constructor is a special non-static member of a class used to initialize an object.
+It loads non-static variables into the object and is automatically called whenever an object is created.
+
+->A constructor does NOT have any return type — not even void.
 
 Example 1:
 ----------
@@ -957,9 +959,10 @@ Output:
 
 Contructor Overloading:
 -------------------------
-Here we create more than one constructor in same class provided they have different number of arguments or different type of arguments
+We can create more than one constructor in the same class, provided they have different numbers of arguments, 
+different types of arguments, or a different sequence of arguments.
 
-Example 1:
+-> It is also known as compile-time polymorphism because the constructor call is resolved at compile time.
 -----------
 public class A {
 	A(){//args=0
@@ -1031,7 +1034,7 @@ mike
 ############
 this keyword
 #############
--> this keyword is a special reference variable that hold's object's address
+-> this keyword is a special reference variable that holds the address of the current object.
 
 Example 1:
 ---------
@@ -1245,8 +1248,10 @@ public class A {
 
 Constructor Chaining
 ---------------------
--> When we call one constructor from another constructor it will form chain like flow structure. This is called as constructor chaining
--> This can be achieved by using this() keyword or Creating Object in another constructor
+-> When one constructor calls another constructor, it forms a chain-like flow of execution.
+This is called constructor chaining.
+-> Constructor chaining is achieved by using this() to call another constructor of the same class or super() 
+to call a parent class constructor.
 
 Example 1:
 ----------
@@ -5563,6 +5568,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
