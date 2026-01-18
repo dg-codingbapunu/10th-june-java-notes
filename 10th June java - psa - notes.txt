@@ -2468,8 +2468,8 @@ protected class A {//-->Error
 Polymorphism in java
 #########################################
 
-Here we develop a feature such that it can take more than one form depending on the situation
-Note: Polymorphism is applicable only on methods and not variables
+Polymorphism is a feature in which a method can take more than one form depending on the situation.
+Note: Polymorphism is applicable only to methods, not variables.
 
 
 Two types of polymorphism
@@ -3181,6 +3181,7 @@ public class B {
 ##################
 What are marker interface?
 Answer: Empty Interface is called as marker interface in java
+A marker interface is used to mark a class so that the JVM or a framework can apply special behavior to objects of that class.
 #########################
 
 Java 8 Features
@@ -3237,10 +3238,10 @@ From test2
 
 2. Functional Interface:
 ---------------------------
--> A functional interface should consist of exactly one incomplete method inside it
+-> A functional interface should consist of exactly one incomplete/abstarct method inside it
 -> Inside functional interface we can develop any number of complete methods using default keyword
 -> During inheritance/multiple inheritance if more than one method is inherited to Functional Interface then you will get error. As shown in below examples 
-
+-> It is mainly used to support lambda expressions and functional programming in Java.
 Example 1:
 --------------------
 @FunctionalInterface
@@ -5610,6 +5611,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
