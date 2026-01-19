@@ -4878,7 +4878,9 @@ public class A {
 	public static void main(String[] args) {
 		try {
 			FileReader fr = new FileReader("G:\\april\\t1.txt");
-			System.out.println((char)fr.read());
+			System.out.println((char)fr.read()); // need to be cast as char other wise it return int(unicode value)
+// Thsi Method only read one charcter in the file
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -4926,7 +4928,7 @@ public class A {
 				System.out.print(c);
 			}
 			
-			fr.close();
+			fr.close(); // To release system resources and avoid file locks or memory leaks.
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -5067,7 +5069,7 @@ BufferedWriter
 #####################
 -> It improves file writing performance
 -> This should be used with FileWriter class, If we use only BufferedWriter then FileWriting cannot be done
--> BufferedWriter class has newline() method
+-> BufferedWriter class has newline() method . Moves the cursor to the next line.
 Example 1:
 ----------
 import java.io.BufferedWriter;
@@ -5611,6 +5613,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
