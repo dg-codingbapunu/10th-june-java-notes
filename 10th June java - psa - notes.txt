@@ -5112,6 +5112,8 @@ Serialization & Deserialization
 -> De-Serialization is a process of reading byte code from the file and form Object based on byte code
 -> To skip writing certain content to object during serialization we can use transient keyword
 
+-> Serialization is used to store object state, transfer objects over network, support caching, session management, and distributed systems.
+
 Example:
 --------
 package p1;
@@ -5613,6 +5615,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
