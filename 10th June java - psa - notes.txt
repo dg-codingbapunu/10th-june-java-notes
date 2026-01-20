@@ -5521,7 +5521,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 
 Note: Can u give practical example where finally block can be used?
 Ans: 
-a. We can peform file closing operation / Database closing Operation
+a.We perform file and database connection closing operations to release system resources and prevent memory leaks.
 
 Example :
 package p1;
@@ -5564,25 +5564,41 @@ final
 
 finally
 -------
--> this is extension of try catch block
+-> this is extension/ used with  try catch block
 -> The code that we write in finally block will run 100%, regardless of exception
+-> system>exit() to exit the finnaly block
 
 finalize():
 ----------
--> This is a method inside Object class and here Garbage collection logic is implemented
+->  finalize() is a method of the Object class
+-> It is called by the Garbage Collector before destroying an object
+-> Used earlier for cleanup operations
 -> We can try calling garbage collector using System.gc(). But will not guarantee 100% execution.
+
+Why is finalize() called by the Garbage Collector?
+Short answer (interview-safe):
+
+finalize() is called by the Garbage Collector to give an object a last chance to release resources before the object is destroyed.
 
 #########################
 Encapsulation in Java
+
 #########################
--> Encapsulation is one of the four fundamental Object-Oriented Programming (OOP) principles in Java (along with inheritance, polymorphism, and abstraction). 
--> It is the mechanism of wrapping variables and methods together as a single unit and restricting direct access to variables.
 
-How to perform Encapsulation:
--------------------------------
-a. Data hiding – Fields (variables) of a class are made private so they cannot be accessed directly from outside the class.
+-> Encapsulation is one of the four fundamental Object-Oriented Programming (OOP) principles in Java (along with inheritance, polymorphism, and abstraction).
 
-Public getter and setter methods – These methods are provided to access and update the value of private fields.
+-> It is the mechanism of wrapping data (variables) and methods together into a single unit (class) and restricting direct access to the data.
+
+How to perform Encapsulation
+
+a. Data Hiding
+
+-> Fields (variables) of a class are declared as private, so they cannot be accessed directly from outside the class.
+
+b. Public Getter and Setter Methods
+
+-> Public getter methods are used to read the value of private variables.
+-> Public setter methods are used to modify the value of private variables in a controlled manner.
 
 Example :
 -----------
@@ -5620,6 +5636,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
