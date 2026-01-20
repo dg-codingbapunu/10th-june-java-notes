@@ -5108,8 +5108,8 @@ Serialization & Deserialization
 Serialization & Deserialization
 ################################
 
--> Serialization is a process of converting object to byte code and storing that in a file system
--> De-Serialization is a process of reading byte code from the file and form Object based on byte code
+-> Serialization is a process of converting object to byte stream and storing that in a file system
+-> De-Serialization is a process of reading byte stream from the file and form Object based on byte stream
 -> To skip writing certain content to object during serialization we can use transient keyword
 
 -> Serialization is used to store object state, transfer objects over network, support caching, session management, and distributed systems.
@@ -5381,6 +5381,11 @@ throws keyword in java
 ###########################
 -> It will throw method / constructor exceptions to calling statement / compiler
 
+What is Exception Propagation?
+
+Exception propagation is the process by which an exception moves from the point where it occurs to the calling methods, until it is handled or reaches the JVM.
+If no one handles it, JVM handles it and program terminates.
+
 package app_java_exceptions;
 
 import java.io.FileReader;
@@ -5615,6 +5620,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
