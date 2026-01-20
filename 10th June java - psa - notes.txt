@@ -5100,8 +5100,8 @@ public class A {
 Serialization & Deserialization
 ################################
 
--> Serialization is a process of converting object to byte code and storing that in a file system
--> De-Serialization is a process of reading byte code from the file and form Object based on byte code
+-> Serialization is a process of converting object to byte stream and storing that in a file system
+-> De-Serialization is a process of reading byte stream from the file and form Object based on byte stream
 -> To skip writing certain content to object during serialization we can use transient keyword
 
 ################################
@@ -5615,6 +5615,7 @@ public class B {
 Threads in java: - Assignment
 ##################
 https://www.youtube.com/watch?v=Uw1tocKJNZw&list=PLbLiFkJgsmq6j_fFlZuy0xIs6upvrML26&index=44
+
 
 
 
